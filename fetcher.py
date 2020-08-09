@@ -8,7 +8,7 @@ class HTMLFetcher(object):
     def __init__(self, baseURL: str = ''):
         super().__init__()
         self.base = baseURL
-        if not baseURL.endswith('/'):
+        if not baseURL.endswith('/') and baseURL != '':
             self.base += '/'
         
         self.prefixList = ['/', './']
@@ -20,7 +20,7 @@ class HTMLFetcher(object):
             if url.startswith(item):
                 url.replace(item, '', 1)
 
-        res = requests.get(self.base.join([url]), params=params)
+        res = requests.get(self.base + url, params=params)
         res.raise_for_status()
         res.encoding = res.apparent_encoding
         
