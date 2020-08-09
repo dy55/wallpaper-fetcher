@@ -1,6 +1,6 @@
 # Bing Wallpaper Fetcher
 
-A simple python program for downloading Bing wallpaper and save it locally.
+A simple python program for downloading Bing wallpaper and saving it locally.
 
 ## Usage
 
