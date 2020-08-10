@@ -15,7 +15,7 @@ A simple python program for downloading Bing wallpaper and saving it locally.
     {
         "destination": "Your destination folder path here",
         "url": "https://bing.com",
-        "params": { "ensearch": 1 },
+        "params": { "ensearch": 1, "mkt": "zh-CN" },
         "selector": "a[id=DownloadHPImage]",
         "filebase": "BingWallpaper"
     }
