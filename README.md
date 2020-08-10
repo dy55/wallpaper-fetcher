@@ -2,7 +2,9 @@
 
 A simple python program for downloading Bing wallpaper and saving it locally.
 
-## Usage
+## Usage Step by Step
+
+1. **Make sure you have Python interpreter installed in your computer**
 
 1. Customize config.json
 ```json
