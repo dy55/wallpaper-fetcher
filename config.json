@@ -1,7 +1,7 @@
 {
     "destination": ".",
-    "url": "https://bing.com",
-    "params": { "ensearch": 1, "mkt": "zh-CN" },
-    "selector": "a[id=DownloadHPImage]",
+    "url": "https://bing.wallpaper.pics",
+    "params": {},
+    "selector": "div[id=photos] > .panel:first-child img",
     "filebase": "BingWallpaper"
 }

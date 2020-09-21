@@ -20,7 +20,7 @@ class HTMLFetcher(object):
             if url.startswith(item):
                 url.replace(item, '', 1)
 
-        res = requests.get(self.base + url, params=params)
+        res = requests.get(self.base + url, params=params, headers={"user-agent": "Chrome/81"})
         res.raise_for_status()
         res.encoding = res.apparent_encoding
         
@@ -47,9 +47,9 @@ class WallpaperFetcher(object):
             delimiter = '\\'
 
         file_name = rename(self.filename)
-        img_url = HTMLFetcher().fetch(self.url, self.params, self.selector)['href']
+        img_url = HTMLFetcher().fetch(self.url, self.params, self.selector)['src']
         
-        img_res = requests.get(f"{self.url}/{img_url}")
+        img_res = requests.get(f"{img_url}")
         img_res.raise_for_status()
 
         with open(f"{destination}{delimiter}{file_name}", 'wb+') as file:
