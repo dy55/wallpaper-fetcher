@@ -13,11 +13,7 @@ A simple python program for downloading Bing wallpaper and saving it locally.
 1. Customize the destination path in config.json
     ```json
     {
-        "destination": "Your destination folder path here",
-        "url": "https://bing.com",
-        "params": { "ensearch": 1, "mkt": "zh-CN" },
-        "selector": "a[id=DownloadHPImage]",
-        "filebase": "BingWallpaper"
+        "destination": "Your destination folder path here"
     }
     ```
 
